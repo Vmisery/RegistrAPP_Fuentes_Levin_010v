@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="navduoc">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="app-logo">
+  <img src="assets/registrapplogo.png" alt="applogo">  
+  </div>
+  <div class="page-content">
+    <h3>RegistrAPP es una aplicación creada para facilitar tu proceso de registro de asistencia, 
+      todo mediante la cámara de tu celular escaneando el código QR que te brindará el profesor al pasar la asistencia.</h3>
+    
+    <ion-card *ngFor="let item of items">
+      <ion-card-header (click)="toggleItem(item)">
+        <ion-card-title>{{ item.title }}</ion-card-title>
+        <ion-card-subtitle>{{ item.subtitle }}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content *ngIf="!item.expanded">
+        <img [src]="item.image" alt="imagenes card">
+      </ion-card-content>
+      
+    </ion-card>
+  </div>
+</ion-content>
+<div class="final-bar">
+</div>
+

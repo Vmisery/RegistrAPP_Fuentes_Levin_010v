@@ -74,7 +74,16 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** Barra Duoc **/
+	--ion-color-navduoc: #073763;
+	--ion-color-navduoc-rgb: 7,55,99;
+	--ion-color-navduoc-contrast: #ffffff;
+	--ion-color-navduoc-contrast-rgb: 255,255,255;
+	--ion-color-navduoc-shade: #063057;
+	--ion-color-navduoc-tint: #204b73;
 }
+
 
 @media (prefers-color-scheme: dark) {
   /*

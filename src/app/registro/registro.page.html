@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="navduoc">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <div class="home-content">
+    <div class="logo-app">
+      <img src="assets/Logo-DUOC-transparente.png" alt="logo-registrapp">
+    </div>
+    <div class="login-form">
+      <div class="input-container">
+        <div class="label-correo">
+          <label>Correo Institucional</label>
+        </div>
+        <input type="text">
+      </div>
+      <div class="input-container">
+        <div class="label-contraseña">
+          <label>Contraseña</label>
+        </div>
+        <input type="password">
+      </div>
+    </div>
+
+
+
+    <div class="button-login">
+    <ion-button color="navduoc">Registrar</ion-button>
+    </div>
+    <div class="final-content">
+      <small>¿Ya tienes una cuenta?</small>
+      <div class="registro-link">
+        <a routerLink="/login">Inicia Sesión</a>
+      </div>
+    </div>
+    <div class="marca-r">
+      <h1>Duoc UC ®</h1>
+    </div>
+  </div>
+  <div class="final-bar">
+  </div>
+</ion-content>
