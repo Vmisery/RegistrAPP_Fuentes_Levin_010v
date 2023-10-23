@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="navduoc">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="main-container">
+    <div class="home-content">
+      <div class="labels">
+        <form [formGroup]="alumnoForm">
+            <ion-label>Datos Personales</ion-label>
+          <ion-item>
+            <ion-label>Nombre:</ion-label>
+            <ion-input formControlName="nombre" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Apellido:</ion-label>
+            <ion-input formControlName="apellido" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Contraseña:</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Confirmar contraseña:</ion-label>
+            <ion-input formControlName="password2" type="password"></ion-input> 
+          </ion-item>
+        </form>
+      </div>
+      <div class="buttons">
+        <ion-button color="navduoc">Registrar</ion-button>
+      </div>
+    </div>
+
+    <div class="final-bar">
+    </div>
+  </div>
+</ion-content>

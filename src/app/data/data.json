@@ -1,0 +1,135 @@
+{
+  "docentes": [
+    {
+      "id": 1,
+      "email": "prueba@profesorduoc.cl",
+      "password": "12345678",
+      "materias": [
+        "Matematicas",
+        "Lenguaje"
+      ],
+      "año": "2023",
+      "semestre": 2,
+      "horas semanales": 30
+    },
+    {
+      "id": 2,
+      "email": "prueba2@profesorduoc.cl",
+      "password": "12345678",
+      "materias": [
+        "Matematicas",
+        "Lenguaje"
+      ],
+      "año": "2023",
+      "semestre": 2,
+      "horas semanales": 30
+    },
+    {
+      "id": 3,
+      "email": "",
+      "password": "123",
+      "nombre": "Jorge",
+      "apellido": "Fuentes",
+      "asignaturas": [
+        {
+          "id": 1,
+          "nombre": "Matematicas"
+        },
+        {
+          "id": 2,
+          "nombre": "Lenguaje"
+        },
+        {
+          "id": 3,
+          "nombre": "Aplicaciones Móviles"
+        }
+      ],
+      "año": 123,
+      "semestre": 123,
+      "horassemanales": 123
+    },
+    {
+      "id": 4,
+      "email": "prueba3@profesorduoc.cl",
+      "password": "1234",
+      "nombre": "Prueba",
+      "apellido": "Tres",
+      "asignaturas": [
+        {
+          "id": 10,
+          "nombre": "Inglés básico I"
+        },
+        {
+          "id": 11,
+          "nombre": "Inglés básico II"
+        }
+      ],
+      "año": 2024,
+      "semestre": 1,
+      "horassemanales": 10
+    }
+  ],
+  
+  "alumnos": [
+    {
+      "id": 1,
+      "nombre": "Jorge",
+      "apellido": "Fuentes",
+      "email": "jor.fuentesv@duocuc.cl",
+      "password": "F19878057-K"
+    },
+    {
+      "id": 2,
+      "nombre": "Macarena",
+      "apellido": "Sanchez",
+      "email": "prueba@duocuc.cl",
+      "password": "12345678"
+    }
+  ],
+  "asignaturas": [
+    {
+      "id": 1,
+      "nombre": "Matematicas"
+    },
+    {
+      "id": 2,
+      "nombre": "Lenguaje"
+    },
+    {
+      "id": 3,
+      "nombre": "Aplicaciones Móviles"
+    },
+    {
+      "id": 4,
+      "nombre": "Programación de algoritmos"
+    },
+    {
+      "id": 5,
+      "nombre": "Consulta a bases de datos"
+    },
+    {
+      "id": 6,
+      "nombre": "Programación de bases de datos"
+    },
+    {
+      "id": 7,
+      "nombre": "Modelamiento de bases de datos"
+    },
+    {
+      "id": 8,
+      "nombre": "Deep Learning"
+    },
+    {
+      "id": 9,
+      "nombre": "Ética para el trabajo"
+    },
+    {
+      "id": 10,
+      "nombre": "Inglés básico I"
+    },
+    {
+      "id": 11,
+      "nombre": "Inglés básico II"
+    }
+  ]
+}

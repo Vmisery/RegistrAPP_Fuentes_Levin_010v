@@ -8,41 +8,44 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-  </ion-header>
+
   <div class="home-content">
     <div class="logo-app">
       <img src="assets/Logo-DUOC-transparente.png" alt="logo-registrapp">
     </div>
     <div class="login-form">
-      <div class="input-container">
+      <form [formGroup]="formularioLogin">
         <div class="label-correo">
-          <label>Correo Institucional</label>
+          <ion-label>Correo Institucional</ion-label>
         </div>
-        <input type="text">
-      </div>
-      <div class="input-container">
+        <ion-input formControlName="email" type="text"></ion-input>
         <div class="label-contraseña">
-          <label>Contraseña</label>
+          <ion-label>Contraseña</ion-label>
         </div>
-        <input type="password">
-      </div>
+        <ion-input formControlName="password" type="password"></ion-input>
+      </form>
+     
+
     </div>
 
 
 
     <div class="button-login">
-    <ion-button color="navduoc">Registrar</ion-button>
+    <ion-button (click)="login()" color="navduoc">Log In</ion-button>
+    </div>
+    <div class="pass-reco">
+      <a routerLink="#">¿Olvidaste tu contraseña?</a>
     </div>
     <div class="final-content">
-      <small>¿Ya tienes una cuenta?</small>
+      <small>Aún no estás registrado?</small>
       <div class="registro-link">
-        <a routerLink="/login">Inicia Sesión</a>
+        <a routerLink="/registro">Regístrate aquí</a>
       </div>
     </div>
     <div class="marca-r">
       <h1>Duoc UC ®</h1>
     </div>
+
   </div>
   <div class="final-bar">
   </div>

@@ -1,0 +1,6 @@
+<ion-list class="menu-list">
+  <ion-item  *ngFor="let asignatura of asignaturas">
+    <ion-label>{{ asignatura.nombre }}</ion-label>
+    <ion-checkbox (ionChange)="asignaturaSeleccionada(asignatura)"></ion-checkbox>
+  </ion-item>
+</ion-list>
