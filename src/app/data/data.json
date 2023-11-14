@@ -67,16 +67,39 @@
       "año": 2024,
       "semestre": 1,
       "horassemanales": 10
+    },
+    {
+      "id": 5,
+      "email": "ArturoL@profesorduoc.cl",
+      "password": "12345678",
+      "nombre": "Arturo",
+      "apellido": "Levin",
+      "asignaturas": [
+        {
+          "id": 3,
+          "nombre": "Aplicaciones Móviles"
+        },
+        {
+          "id": 5,
+          "nombre": "Consulta a bases de datos"
+        },
+        {
+          "id": 6,
+          "nombre": "Programación de bases de datos"
+        }
+      ],
+      "año": 2023,
+      "semestre": 2,
+      "horassemanales": 40
     }
   ],
-  
   "alumnos": [
     {
       "id": 1,
       "nombre": "Jorge",
       "apellido": "Fuentes",
       "email": "jor.fuentesv@duocuc.cl",
-      "password": "F19878057-K"
+      "password": "12345678"
     },
     {
       "id": 2,

@@ -13,7 +13,9 @@ export interface IAlumno{
     id: number;
     email: String;
     password: String;
-    role: 'alumno' | 'docente';
+    nombre: String;
+    apellido: String;
+    rut: String;
 }
 export interface Asignatura{
     id: String;

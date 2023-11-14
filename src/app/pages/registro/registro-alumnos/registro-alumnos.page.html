@@ -22,6 +22,10 @@
             <ion-input formControlName="apellido" type="text"></ion-input>
           </ion-item>
           <ion-item>
+            <ion-label>Rut:</ion-label>
+            <ion-input formControlName="rut" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
             <ion-label>Contraseña:</ion-label>
             <ion-input formControlName="password" type="password"></ion-input>
           </ion-item>
@@ -32,7 +36,7 @@
         </form>
       </div>
       <div class="buttons">
-        <ion-button color="navduoc">Registrar</ion-button>
+        <ion-button (click)="registrarAlumno()" color="navduoc">Registrar</ion-button>
       </div>
     </div>
 

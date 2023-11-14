@@ -18,17 +18,16 @@
         <div class="label-correo">
           <ion-label  position="floating" >Correo Institucional</ion-label>
         </div>
-        <ion-input [(ngModel)]="email" name="email" type="email"></ion-input>
       </div>
-      <div *ngIf="errorMensaje" class="error-message">
-        {{ errorMensaje }}
-      </div>
+      <form autocomplete="on" [formGroup]="formularioregistro">
+        <ion-input formControlName="email" type="text"></ion-input>
+      </form>
     </div>
 
 
 
     <div class="button-login">
-    <ion-button (click)="registrar(email)" color="navduoc">Registrar</ion-button>
+    <ion-button (click)="registrar()" color="navduoc">Registrar</ion-button>
     </div>
     <div class="final-content">
       <small>¿Ya tienes una cuenta?</small>
