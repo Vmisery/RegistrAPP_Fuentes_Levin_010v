@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="navduoc">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu2"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-avatar class="ion-margin">
+      <img src="assets/IAFOR-Blank-Avatar-Image-1.jpg" alt="Avatar">
+    </ion-avatar>
+
+    <ion-label class="header">Detalles del Perfil</ion-label>
+    <form [formGroup]="editform">
+      <ion-list>
+        <div class="inline-input">
+          <ion-label position="stacked">Nombre:</ion-label>
+          <ion-input formControlName="nombre" type="text" ></ion-input>
+        </div>
+        <div class="inline-input">
+          <ion-label position="stacked">Apellido:</ion-label>
+          <ion-input formControlName="apellido" type="text"></ion-input>
+        </div>
+        <div class="inline-input">
+          <ion-label position="stacked">Asignaturas:</ion-label>
+          <ion-list>
+            <ion-item>
+              <ion-select interface="popover">
+                <ion-select-option *ngFor="let asignatura of userData.asignaturas" [value]="asignatura.nombre">
+                  {{ asignatura.nombre }}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div class="inline-input">
+          <ion-label position="stacked">Año:</ion-label>
+          <ion-input formControlName="anio" type="text"></ion-input>
+        </div>
+        <div class="inline-input">
+          <ion-label position="stacked">Semestre:</ion-label>
+          <ion-input formControlName="semestre" type="text"></ion-input>
+        </div>
+        <div class="inline-input">
+          <ion-label position="stacked">H.Semanales:</ion-label>
+          <ion-input formControlName="horasS" type="text"></ion-input>
+        </div>
+        <div class="inline-input">
+          <ion-label position="stacked">Contraseña:</ion-label>
+          <ion-input formControlName="passwordedit" type="{{ editmode ? 'text' : 'password' }}" placeholder="{{ editmode ? uncensoredPassword : '********' }}" ></ion-input>
+        </div>
+      </ion-list>
+    </form>
+
+    <div class="button-container">
+      <ion-button *ngIf="!editmode" class="btn-edit" [color]="'primary'" (click)="editar()">Editar</ion-button>
+      <ion-button *ngIf="editmode" class="btn-cancel" (click)="cancelar()" [color]="'danger'">
+        Cancelar
+      </ion-button>
+      <ion-button *ngIf="editmode" class="btn-save" [color]="'success'" (click)="guardar()">Guardar</ion-button>
+      <ion-button *ngIf="!editmode" class="btn-save" [color]="'medium'" disabled>Guardar</ion-button> 
+    </div>
+    <div class="final-bar">
+    </div>
+
+</ion-content>

@@ -2,31 +2,7 @@
   "docentes": [
     {
       "id": 1,
-      "email": "prueba@profesorduoc.cl",
-      "password": "12345678",
-      "materias": [
-        "Matematicas",
-        "Lenguaje"
-      ],
-      "año": "2023",
-      "semestre": 2,
-      "horas semanales": 30
-    },
-    {
-      "id": 2,
-      "email": "prueba2@profesorduoc.cl",
-      "password": "12345678",
-      "materias": [
-        "Matematicas",
-        "Lenguaje"
-      ],
-      "año": "2023",
-      "semestre": 2,
-      "horas semanales": 30
-    },
-    {
-      "id": 3,
-      "email": "",
+      "email": "jor.fuentesv@profesorduoc.cl",
       "password": "123",
       "nombre": "Jorge",
       "apellido": "Fuentes",
@@ -49,7 +25,7 @@
       "horassemanales": 123
     },
     {
-      "id": 4,
+      "id": 2,
       "email": "prueba3@profesorduoc.cl",
       "password": "1234",
       "nombre": "Prueba",
@@ -69,15 +45,47 @@
       "horassemanales": 10
     },
     {
-      "id": 5,
+      "id": 3,
       "email": "ArturoL@profesorduoc.cl",
-      "password": "12345678",
       "nombre": "Arturo",
       "apellido": "Levin",
       "asignaturas": [
         {
+          "id": 10,
+          "nombre": "Inglés básico I"
+        },
+        {
+          "id": 11,
+          "nombre": "Inglés básico II"
+        }
+      ],
+      "año": 2023,
+      "semestre": "2",
+      "password": "12345678",
+      "horassemanales": "20"
+    },
+    {
+      "id": 4,
+      "email": "macarenita@profesorduoc.cl",
+      "password": "12345678",
+      "nombre": "Macarena",
+      "apellido": "Sanchez",
+      "asignaturas": [
+        {
+          "id": 1,
+          "nombre": "Matematicas"
+        },
+        {
+          "id": 2,
+          "nombre": "Lenguaje"
+        },
+        {
           "id": 3,
           "nombre": "Aplicaciones Móviles"
+        },
+        {
+          "id": 4,
+          "nombre": "Programación de algoritmos"
         },
         {
           "id": 5,
@@ -86,27 +94,69 @@
         {
           "id": 6,
           "nombre": "Programación de bases de datos"
+        },
+        {
+          "id": 7,
+          "nombre": "Modelamiento de bases de datos"
+        },
+        {
+          "id": 8,
+          "nombre": "Deep Learning"
+        },
+        {
+          "id": 9,
+          "nombre": "Ética para el trabajo"
         }
       ],
       "año": 2023,
       "semestre": 2,
-      "horassemanales": 40
+      "horassemanales": 45
+    },
+    {
+      "id": 5,
+      "email": "swdefrgt@profesorduoc.cl",
+      "password": "12345678",
+      "nombre": "pruebita",
+      "apellido": "moseee",
+      "asignaturas": [
+        {
+          "id": 1,
+          "nombre": "Matematicas"
+        },
+        {
+          "id": 3,
+          "nombre": "Aplicaciones Móviles"
+        }
+      ],
+      "año": 4444,
+      "semestre": 1,
+      "horassemanales": 55
     }
   ],
   "alumnos": [
     {
       "id": 1,
+      "email": "jor.fuentesv@duocuc.cl",
       "nombre": "Jorge",
       "apellido": "Fuentes",
-      "email": "jor.fuentesv@duocuc.cl",
+      "rut": "19.878.057-K",
       "password": "12345678"
     },
     {
       "id": 2,
+      "email": "prueba@duocuc.cl",
       "nombre": "Macarena",
       "apellido": "Sanchez",
-      "email": "prueba@duocuc.cl",
+      "rut": "19.378.978-1",
       "password": "12345678"
+    },
+    {
+      "id": 3,
+      "email": "prueba666@duocuc.cl",
+      "password": "1234",
+      "nombre": "El",
+      "apellido": "Diablito",
+      "rut": "19666777-1"
     }
   ],
   "asignaturas": [
@@ -153,6 +203,269 @@
     {
       "id": 11,
       "nombre": "Inglés básico II"
+    }
+  ],
+  "clases_registradas": [
+    {
+      "id": 1,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [
+        {
+          "id": 1,
+          "nombre": "Jorge",
+          "apellido": "Fuentes",
+          "rut": "19.878.057-K",
+          "presente": true
+        },
+        {
+          "id": 2,
+          "email": "prueba@duocuc.cl",
+          "nombre": "Macarena",
+          "apellido": "Sanchez",
+          "rut": "19.378.978-1",
+          "presente": true
+        }
+      ],
+      "fecha": "19-11-2023 22:31"
+    },
+    {
+      "id": 2,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 03:15"
+    },
+    {
+      "id": 3,
+      "id_asignatura": 11,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 03:19"
+    },
+    {
+      "id": 4,
+      "id_asignatura": 11,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 03:19"
+    },
+    {
+      "id": 5,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 03:22"
+    },
+    {
+      "id": 6,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 03:24"
+    },
+    {
+      "id": 7,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 03:30"
+    },
+    {
+      "id": 8,
+      "id_asignatura": 4,
+      "id_docente": 4,
+      "alumnos": [],
+      "fecha": "20/11/2023, 09:22"
+    },
+    {
+      "id": 9,
+      "id_asignatura": 11,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 16:46"
+    },
+    {
+      "id": 10,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 16:56"
+    },
+    {
+      "id": 11,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:10"
+    },
+    {
+      "id": 12,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:15"
+    },
+    {
+      "id": 13,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:19"
+    },
+    {
+      "id": 14,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:22"
+    },
+    {
+      "id": 15,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:25"
+    },
+    {
+      "id": 16,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:28"
+    },
+    {
+      "id": 17,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:28"
+    },
+    {
+      "id": 18,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:29"
+    },
+    {
+      "id": 19,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:30"
+    },
+    {
+      "id": 20,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:31"
+    },
+    {
+      "id": 21,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:35"
+    },
+    {
+      "id": 22,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:36"
+    },
+    {
+      "id": 23,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:37"
+    },
+    {
+      "id": 24,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:38"
+    },
+    {
+      "id": 25,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:52"
+    },
+    {
+      "id": 26,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:55"
+    },
+    {
+      "id": 27,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 17:58"
+    },
+    {
+      "id": 28,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 18:06"
+    },
+    {
+      "id": 29,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 18:11"
+    },
+    {
+      "id": 30,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 18:11"
+    },
+    {
+      "id": 31,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 18:12"
+    },
+    {
+      "id": 32,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 18:13"
+    },
+    {
+      "id": 33,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 18:22"
+    },
+    {
+      "id": 34,
+      "id_asignatura": 10,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 18:40"
+    },
+    {
+      "id": 35,
+      "id_asignatura": 11,
+      "id_docente": 3,
+      "alumnos": [],
+      "fecha": "20/11/2023, 19:17"
     }
   ]
 }

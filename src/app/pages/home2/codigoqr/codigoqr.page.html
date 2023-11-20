@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="navduoc">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu2"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="qrcode">
+    <qrcode [allowEmptyString]="true" [qrdata]="qrdata" [width]="256" [errorCorrectionLevel]="'M'"></qrcode> 
+  </div> 
+  <div class="final-bar">
+  </div>
+
+</ion-content>
+

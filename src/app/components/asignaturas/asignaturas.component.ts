@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AsignaturasService } from '../../services/asignaturas/asignaturas.service';
-
+import { PopoverController } from '@ionic/angular';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-asignaturas',
@@ -11,7 +12,7 @@ import { AsignaturasService } from '../../services/asignaturas/asignaturas.servi
 export class AsignaturasComponent  implements OnInit {
   asignaturas: any[] = [];
   
-  constructor(private http: HttpClient,  private asignaturasService: AsignaturasService) { 
+  constructor(private http: HttpClient,  private asignaturasService: AsignaturasService, private popoverController: PopoverController, private datas: DataService) { 
   }
 
   
@@ -21,6 +22,8 @@ export class AsignaturasComponent  implements OnInit {
     });
   }
   asignaturasSeleccionadas: string[] = [];
+  asignaturasData: any[] = []
+
 
   asignaturaSeleccionada(asignatura: any) {
     const index = this.asignaturas.indexOf(asignatura);
@@ -37,7 +40,11 @@ export class AsignaturasComponent  implements OnInit {
   }
 
   getasignaturaSeleccionada() {
-    return this.asignaturasSeleccionadas
+    return this.asignaturasSeleccionadas;
+  }
+
+  getasignaturasData(){
+    return this.asignaturasData;
   }
 
   

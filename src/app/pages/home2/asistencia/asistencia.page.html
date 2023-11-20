@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="navduoc">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu2"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="logo-app">
+    <img src="assets/logosolo.png" alt="logo-registrapp">
+  </div>
+  <div class="header">
+    <ion-label >Selecciona una asignatura:</ion-label>
+  </div>
+  <ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-select interface="popover" [(ngModel)]="selectedAsignatura" (ionChange)="onAsignaturaChange($event)">
+          <ion-select-option *ngFor="let asignatura of userData.asignaturas" [value]="asignatura.id">
+            {{ asignatura.nombre }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-item>
+  <div class="btn-container">
+    <ion-button (click)="generarQR()" [disabled]="asignaturaSeleccionada">
+      Generar QR
+    </ion-button>
+  </div>
+  <div class="final-bar">
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="navduoc">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu3"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="scanner">
+    <zxing-scanner (scanSuccess)="onScanSuccess($event)"></zxing-scanner>
+    <h1><strong> {{ result }} </strong></h1>
+  </div>
+    <div class="final-bar">
+    </div>
+
+</ion-content>

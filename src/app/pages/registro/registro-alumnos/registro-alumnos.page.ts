@@ -3,7 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../../../services/data/data.service';
 import { IAlumno } from '../../../interfaces/interfaces';
 import { HttpClient } from '@angular/common/http';
-
+import { AlertController } from '@ionic/angular';
+import { AuthService } from 'src/app/services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-alumnos',
@@ -21,7 +23,7 @@ export class RegistroAlumnosPage implements OnInit {
     rut: ''
   }
 
-  constructor(private fb: FormBuilder, private dataService: DataService, private http: HttpClient) {
+  constructor(private router: Router, private auth: AuthService, private alertController: AlertController, private fb: FormBuilder, private dataService: DataService, private http: HttpClient) {
     this.alumnoForm = this.fb.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
@@ -34,6 +36,27 @@ export class RegistroAlumnosPage implements OnInit {
   ngOnInit() {
   }
 
+  async guardar() {
+    const alert = await this.alertController.create({
+      header: 'Registrar Alumno',
+      message: '¿Deseas registrarte con la información proporcionada?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'secondary'
+        },
+        {
+          text: 'Aceptar',
+          handler: () => {
+            this.registrarAlumno();
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
   registrarAlumno() {
     if (this.alumnoForm.valid) {
       if( this.alumnoForm.value.password === this.alumnoForm.value.password2) {
@@ -42,9 +65,9 @@ export class RegistroAlumnosPage implements OnInit {
       this.newAlumno.apellido = this.alumnoForm.value.apellido;
       this.newAlumno.password = this.alumnoForm.value.password;
       this.newAlumno.rut = this.alumnoForm.value.rut;
-      console.log(this.newAlumno)
+      this.auth.presentToast('Alumno/a registrado/a con éxito!!');
       this.http.post('http://localhost:3300/alumnos', this.newAlumno).subscribe((respuesta) => {
-        console.log('Alumno registrado con éxito', respuesta);
+        this.router.navigate(['/login'])
       }
       )
     }

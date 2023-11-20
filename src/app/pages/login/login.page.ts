@@ -7,6 +7,7 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data/data.service';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -15,10 +16,8 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  loggedIn: Boolean = false;
-  loggedInUser: String = '';
   formularioLogin: FormGroup;
-  constructor(public fb: FormBuilder, private authService: AuthService, public alertController: AlertController) { 
+  constructor(public fb: FormBuilder, private authService: AuthService, public alertController: AlertController, private datas: DataService, private router: Router) { 
 
     this.formularioLogin = this.fb.group({
       'email': new FormControl("", Validators.email),
@@ -45,14 +44,24 @@ export class LoginPage implements OnInit {
       if (email.endsWith("@duocuc.cl")) {
         this.authService.listaalumnos(email, password)
         .then((validado: boolean) => {
-          console.log('prueba: ', validado) })
+          if(validado){
+            this.datas.setEstudiante();
+            this.datas.sucess();
+            this.datas.setToken();
+            this.router.navigate(['/home3']);
+          }})
         .catch((error) => {
           console.error('Error al validar al alumno:', error);
         });
       } else if (email.endsWith("@profesorduoc.cl")) {
         this.authService.listadocentes(email, password)
         .then((validado: boolean) => {
-          console.log('prueba: ', validado) })
+          if(validado){
+            this.datas.setDocente();
+            this.datas.sucess();
+            this.datas.setToken();
+            this.router.navigate(['/home2']);
+          }})
         .catch((error) => {
           console.error('Error al validar al docente:', error);
         });

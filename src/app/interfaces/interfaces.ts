@@ -21,3 +21,11 @@ export interface Asignatura{
     id: String;
     nombre: String;
 }
+
+export interface iclase_registrada{
+    id: Number;
+    id_asignatura: Number;
+    id_docente: String;
+    alumnos: [],
+    fecha: String
+}

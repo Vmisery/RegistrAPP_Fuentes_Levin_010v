@@ -1,24 +1,31 @@
 
-
 ion-toolbar{
     background-color: var(--ion-color-navduoc);
   }
   
-  ion-menu-button{
+ion-menu-button{
     color: white;
   }
-  
+
+  .btn-asistencia{
+    margin: 0 auto;
+  }
+
+  .container {
+    text-align: center;
+    margin-top: 15em;
+  }
   .home-content{
     height: 100%;
     text-align: center;
     align-items: end;
   }
-  
+
   .logo-app img{
-    padding-top: 30%;
-    padding-left:2%;
+    margin-left: 5em;
+    margin-top: 2.5em;
     height: 20%;
-    width: 70%;
+    width: 60%;
   }
   
   ion-button{
@@ -34,30 +41,6 @@ ion-toolbar{
     bottom: 0;
   }
   
-  .final-content{
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding-left: 20px;
-    padding-top: 40%;
-    padding-right: 20px;
-  }
-  
-  .marca-r h1{
-    margin: 0;
-    padding-top: 10px;
-    font-size: medium;
-    padding-left: 20px;
-    text-align: left;
-  }
-  
-  .registro-link {
-    font-weight: bold; 
-    align-self: flex-end; 
-    font-size: medium;
-  }
   
   
   

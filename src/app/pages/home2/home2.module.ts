@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -15,7 +16,8 @@ import { Home2Page } from './home2.page';
     FormsModule,
     IonicModule,
     Home2PageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QRCodeModule
   ],
   declarations: [Home2Page]
 })

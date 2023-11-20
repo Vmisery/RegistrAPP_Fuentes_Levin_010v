@@ -1,6 +1,6 @@
 <ion-app>
   <ion-menu menuId="main-menu" content-id="main">
-    <ion-header>
+    <ion-header> 
       <ion-toolbar color="navduoc">
         <ion-title></ion-title>
       </ion-toolbar>
@@ -34,5 +34,82 @@
       </ion-list>
     </ion-content>
   </ion-menu>
+
+  <ion-menu menuId="main-menu2" content-id="main2">
+    <ion-header> 
+      <ion-toolbar color="navduoc">
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="/home2">
+            <ion-icon name="home-outline" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/perfildocente">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/asistencia" >
+            <ion-icon name="calendar-outline" slot="start"></ion-icon>
+            <ion-label>Asistencia</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <ion-menu-toggle>
+      <ion-item>
+        <ion-icon name="id-card-outline" slot="start"></ion-icon>
+        <ion-label (click)="Logout()">Logout</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+  </ion-menu>
+
+  
+  <ion-menu menuId="main-menu3" content-id="main3">
+    <ion-header> 
+      <ion-toolbar color="navduoc">
+        <ion-title></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerLink="/home3">
+            <ion-icon name="home-outline" slot="start"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/perfilestudiante">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/deploycamera">
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label>Registrar Asistencia</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <ion-item>
+      <ion-icon name="id-card-outline" slot="start"></ion-icon>
+      <ion-label (click)="Logout()">Logout</ion-label>
+    </ion-item>
+  </ion-menu>
+
   <ion-router-outlet id="main"></ion-router-outlet>
+  <ion-router-outlet id="main2"></ion-router-outlet>
+  <ion-router-outlet id="main3"></ion-router-outlet>
+
+
+
 </ion-app>
